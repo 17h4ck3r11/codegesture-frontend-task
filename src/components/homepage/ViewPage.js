@@ -88,7 +88,7 @@ function ViewPage() {
     <div className='viewPage d-flex flex-column justify-content-center align-items-center' style={{ width: '100vw', padding: "7vw 3vw" }}>
       <h2 style={{ marginBottom: '2vw', background: "-webkit-linear-gradient(#159957, #155799)", fontWeight: '900', fontSize: '3vw', backgroundClip: "text", WebkitTextFillColor: "transparent" }}>{data.title}</h2>
       <img src={data.image} style={{ width: "100%" }} alt="" />
-      {(data.file.length > 0) ? <iframe title="PDF Viewer" src={data.file} width="100%" height="600px" /> : null}
+      {(data.file && data.file.length > 0) ? <iframe title="PDF Viewer" src={data.file} width="100%" height="600px" /> : null}
       <div className="postedOn" style={{ width: "100%" }}>
         <span style={{ color: '#FF1f04', fontWeight: "700", fontSize: "1vw" }}>{data.month} {data.date}, {data.year}</span>
       </div>
