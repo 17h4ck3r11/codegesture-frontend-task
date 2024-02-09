@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+*::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    transition: .3s linear;
+}
+  
+::-webkit-scrollbar-thumb, *:hover::-webkit-scrollbar-thumb {
+    background: #e1e6f1;
+}
+  
+
+/* Dashboard CSS */
+
+.dashboard {
+    overflow-x: hidden;
+}
+
+/* HorizontalNav CSS */
+
+.horizontalNav .navbarIcons {
+    display: flex;
+    color: #232D3F;
+    list-style: none;
+    gap: 10vw;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end; 
+    margin: 0;
+}
+
+.horizontalNav li {
+    cursor: pointer;
+}
+
+.horizontalNav .navbarOptions {
+    display: flex;
+    align-items: center;
+}
+
+.horizontalNav .navbarOptions .profile {
+    transition: 0.5s ease-in;
+}
+
+.horizontalNav .navbarOptions .profile svg {
+    width: 100%;
+}
+
+.horizontalNav .navbarOptions .profile:hover {
+    color: #5c6bc0!important;
+    transform: rotate(360deg);
+}
+
+.horizontalNav .navbarOptions .logout {
+    transition: 0.3s ease-in;
+}
+
+.horizontalNav .navbarOptions .logout:hover {
+    color: red;
+}
+
+.horizontalNav .hiddenItems {
+    display: none;
+    transition: 0.3s ease-in;
+}
+
+.horizontalNav .hiddenItems:hover {
+    cursor: pointer;
+    color: #5c6bc0;
+}
+
+/* Dashboard Section CSS */
+
+.dashboardSection {
+    min-height: 100vh;
+}
+
+/* SideNav CSS */
+
+.sideNav {
+    width: 20vw;
+    background-image: url('./assets/img/SidebarBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.sideNav .darken {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+}
+
+.sideNav .darken ul {
+    list-style: none;
+    color: white;
+    width: 100%;
+    font-size: 1.2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.sideNav .darken li {
+    display: flex;
+    gap: 1.5vw;
+    align-items: center;
+    justify-content: left;
+    padding: 0.5vw 1vw;
+    border-radius: 7px;
+    transition: 0.3s ease-in;
+}
+
+.sideNav .arrow {
+    display: none;
+    transition: 0.5s ease-in;
+}
+
+.sideNav .darken li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #5c6bc0;
+}
+
+.sideNav .darken li:hover .arrow {
+    color: #5c6bc0;
+    display: block;
+}
+
+.sideNav .darken li.active {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #5c6bc0;
+}
+
+/* Dashboard Page CSS */
+
+.dashboardPage .dashboardBox {
+    background-color: white;
+    padding: 0 3vw;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboardPage .dashboardBox img {
+    width: 25%;
+}
+
+.dashboardPage .box-container {
+    gap: 2vw;
+    margin: 8vw 2vw;
+}
+
+.dashboardPage .dashboardBox {
+    transition: 0.3s ease-in;
+}
+
+.dashboardBox:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.dashboardPage .dashboardBox h2 {
+    font-weight: 1.2vw;
+    font-weight: 600;
+}
+
+/* Content Area CSS */
+
+.dashboardRender {
+    width: 100%;
+    padding-left: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add Note CSS */
+
+.newNotes .Form-container, .updateNotes .Form-container, .editProfile .Form-container {
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    width: 50%;
+}
+
+.newNotes form, .updateNotes form, .editProfile form  {
+    background-color: white;
+    padding: 2vw 2vw;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* List Notes CSS */
+
+.listNotes th, .listNotes td {
+    padding: 1vw 2vw;
+    text-align: center;
+}
+
+/* View Notes CSS */
+
+.viewNote .viewImage {
+    transition: 0.3s ease-in;
+}
+
+.viewNote .viewImage:hover {
+    cursor: pointer;
+}
+
+/* Edit Profile */
+
+.editProfile {
+    width: 100%;
+}
+
+@media (min-width: 767px) and (max-width: 900px) {
+    .horizontalNav .navbar-brand {
+        width: 25vw!important;
+    }
+
+    .horizontalNav .hiddenItems {
+        display: block;
+    }
+
+    .horizontalNav .image {
+        width: 25vw!important;
+    }
+
+    .sideNav {
+        display: none;
+    }
+
+    .dashboardBox {
+        width: 100%!important;
+        margin-left: 0!important;
+    }
+
+    .box-container {
+       width: 100%!important;
+    }
+
+    .dashboardRender, .listNotes, .viewNote, .Form-container, .editProfile, .ContentArea {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%!important;
+    }
+
+    .dashboardRender {
+        padding-left: 0!important;
+    }
+
+    .newNotes .Form-container, .updateNotes .Form-container, .editProfile .Form-container {
+        padding: 5vw 10vw;
+    }
+
+    .listNotes {
+        margin-top: 5vw;
+    }
+
+    .viewNote {
+        margin-top: 7vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        background-color:white;
+    }
+
+    .horizontalNav .navbar-brand {
+        width: 35vw!important;
+    }
+
+    .horizontalNav .navbarIcons {
+        flex-direction: column;
+    }
+
+    .horizontalNav .hiddenItems {
+        display: block;
+    }
+
+    .horizontalNav .image {
+        width: 25vw!important;
+    }
+
+    .sideNav {
+        display: none;
+    }
+
+    .dashboardBox {
+        width: 100%!important;
+        margin-left: 0!important;
+    }
+
+    .box-container {
+       width: 100%!important;
+    }
+
+    .dashboardRender, .listNotes, .viewNote, .Form-container, .editProfile, .ContentArea {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%!important;
+    }
+
+    .dashboardRender {
+        padding-left: 0!important;
+    }
+
+    .newNotes .Form-container, .updateNotes .Form-container, .editProfile .Form-container {
+        padding: 5vw 10vw;
+    }   
+
+    .listNotes {
+        margin-top: 10vw;
+    }
+
+    .viewNote {
+        margin-top: 12vw;
+    }
+}
