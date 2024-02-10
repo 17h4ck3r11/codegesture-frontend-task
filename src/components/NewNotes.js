@@ -90,7 +90,7 @@ function NewNotes() {
   const handleFileUrl = async (url) => {
     let result = await fetch(`${process.env.REACT_APP_BACKEND_URL}/add-note`, {
       method: 'post',
-      body: JSON.stringify({title, description, image: "", file: url, date, month, year, comment: [], like: [], views: 0}),
+      body: JSON.stringify({title, description, image: "https://res.cloudinary.com/doqqdr0fm/image/upload/v1707501762/Document-Writing-1024x593_wfqpql.webp", file: url, date, month, year, comment: [], like: [], views: 0}),
       headers: {
         "Content-Type": "application/json"
       }
