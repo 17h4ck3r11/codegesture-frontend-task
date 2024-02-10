@@ -40,11 +40,11 @@ function DashboardPage() {
 
     noteData.map((item)=>{
       if(item.date == date && item.month == monthNames[month] && item.year == year) {
-        setdailyNoteCount(dailyNoteCount + 1);
+        setdailyNoteCount(++dailyNoteCount);
       }
 
       if(item.month == monthNames[month] && item.year == year) {
-        setmonthlyNoteCount(monthlyNoteCount + 1);
+        setmonthlyNoteCount(++monthlyNoteCount);
       }
     })
   }
