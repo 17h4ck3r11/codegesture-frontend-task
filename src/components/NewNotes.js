@@ -150,7 +150,7 @@ function NewNotes() {
     
     const d = new Date();
     setdate(d.getDate())
-    setmonth(monthNames[d.getMonth() - 1])
+    setmonth(monthNames[d.getMonth()])
     setyear(d.getFullYear())
     console.log(d.getMonth())
   }, [])
