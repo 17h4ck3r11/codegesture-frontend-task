@@ -38,13 +38,18 @@ function DashboardPage() {
 
     noteData = await noteData.json();
 
+    let monthlyCount = 0;
+    let dailyCount = 0;
+
     noteData.map((item)=>{
       if(item.date == date && item.month == monthNames[month] && item.year == year) {
-        setdailyNoteCount((dailyNoteCount+1));
+        dailyCount = dailyCount + 1;
+        setdailyNoteCount(dailyCount);
       }
 
       if(item.month == monthNames[month] && item.year == year) {
-        setmonthlyNoteCount((monthlyNoteCount+1));
+        monthlyCount = monthlyCount + 1;
+        setmonthlyNoteCount(monthlyCount);
       }
     })
   }
