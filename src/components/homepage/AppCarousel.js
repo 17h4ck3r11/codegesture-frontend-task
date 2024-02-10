@@ -23,7 +23,7 @@ function AppCarousel() {
     <div className='placementCarousel'>
       <Carousel>
           {
-            heroData.slice(0, 11).map(hero => {
+            heroData.reverse().slice(0, 11).map(hero => {
               return (
                 <Carousel.Item key={hero.id}>
                   <img
