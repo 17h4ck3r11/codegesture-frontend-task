@@ -1,45 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 
-// var heroData = [
-//   {
-//     id: 0,
-//     image: 'https://siet.in/Uploads/PlacementBanners/PLC00087.jpg'
-//   },
-//   {
-//     id: 1,
-//     image: 'https://siet.in/Uploads/PlacementBanners/PLC00086.jpg'
-//   },
-//   {
-//     id: 2,
-//     image: 'https://siet.in/Uploads/PlacementBanners/PLC00078.jpg'
-//   },
-//   {
-//     id: 3,
-//     image: 'https://siet.in/Uploads/PlacementBanners/PLC00080.jpg'
-//   },
-//   {
-//     id: 4,
-//     image: 'https://siet.in/Uploads/PlacementBanners/PLC00081.jpg'
-//   },
-//   {
-//     id: 5,
-//     image: "https://siet.in/Uploads/PlacementBanners/PLC00084.jpg"
-//   },
-//   {
-//     id: 6,
-//     image: "https://siet.in/Uploads/PlacementBanners/PLC00083.jpg"
-//   },
-//   {
-//     id: 7,
-//     image: "https://siet.in/Uploads/PlacementBanners/PLC00082.jpg"
-//   },
-//   {
-//     id: 8,
-//     image: 'https://siet.in/Uploads/PlacementBanners/PLC00088.jpg'
-//   }
-// ]
-
 function AppCarousel() {
     const [heroData, setheroData] = useState([]);
 
@@ -62,7 +23,7 @@ function AppCarousel() {
     <div className='placementCarousel'>
       <Carousel>
           {
-            heroData.map(hero => {
+            heroData.slice(0, 11).map(hero => {
               return (
                 <Carousel.Item key={hero.id}>
                   <img
